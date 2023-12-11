@@ -1,19 +1,25 @@
 
-.container-sinopsis {
+.container-sinopsis2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   gap: 10px;
   grid-template-areas: "p image";
-
 }
 
 h1 {
+  display: flex;
+  position: relative;
   text-align: center;
   font-size: 80px;
-  color: white;
+  color: rgb(77, 75, 75);
+  margin: 50px;
 }
-
+h2{
+  color: rgb(77, 75, 75);
+  margin: 50px;
+  font-size: 50px;
+}
 .personajes {
   width: 100%;
   height: auto;
@@ -22,9 +28,6 @@ h1 {
 }
 
 p {
-  position: absolute;
-  text-align: center;
-  width: 700px;
-  margin-top:350px;
-  margin-left: 50px;
+ margin: 50px;
+ 
 }

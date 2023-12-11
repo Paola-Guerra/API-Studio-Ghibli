@@ -4,7 +4,10 @@ const customURLs = {
   "58611129-2dbc-4a81-a72f-77ddfc1b1b49": "https://www.google.com/search?q=ver+totoro&sca_esv=589476392&sxsrf=AM9HkKkxKmD5A_RMxaaopevLFbnUwGyCYw%3A1702170897088&ei=ERF1ZYf-BLaE9u8P6PycyAg&ved=0ahUKEwjHyqvd2IODAxU2gv0HHWg-B4kQ4dUDCBA&uact=5&oq=ver+totoro&gs_lp=Egxnd3Mtd2l6LXNlcnAiCnZlciB0b3Rvcm8yChAjGIAEGIoFGCcyBRAAGIAESOAZUIcKWOAQcAF4AZABAJgBrAGgAa8FqgEDMi40uAEDyAEA-AEBwgIQEAAYgAQYigUYQxixAxiDAcICChAAGIAEGIoFGEPCAhMQLhiABBixAxiDARjHARivARgKwgILEAAYgAQYsQMYgwHCAggQABiABBixA8ICDhAAGIAEGIoFGLEDGIMBwgIKEAAYgAQYFBiHAuIDBBgAIEGIBgE&sclient=gws-wiz-serp",
   // Añade más URLs para las demás películas
 };
-
+const sinopsis = {
+  "2baf70d1-42bb-4437-b551-e5fed5a87abe": "mivecinototoro.html",
+  "58611129-2dbc-4a81-a72f-77ddfc1b1b49": "mivecinototoro.html"
+};
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -39,7 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
         <p class="card-text"><strong>Director:</strong> ${film.director}</p>
         <p class="card-text"><strong>Release Date:</strong> ${film.release_date}</p>
         
-       <a href="${customURLs[film.id]}" class="btn btn-primary">Learn More</a>
+       <a href="${customURLs[film.id]}" class="btn btn-primary">Ver Película</a><br>
+
+       <a href="${sinopsis[film.id]}" class="masinfo">+Info</a>
       </div>
     </div>
   `;
