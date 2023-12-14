@@ -1,41 +1,42 @@
-*{
-    /*padding: 0 auto;*/
-    margin:0;
-    box-sizing: border-box;
-    background-color: #eee;
-    font-family: Arial, Helvetica, sans-serif;
-    background-size: cover;
-    background-position: center ;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: #999;
-}
-.container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-   /* grid-template-rows: repeat(3, 200px);*/
-    gap: 20px;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: start;
+* {
+  /*padding: 0 auto;*/
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #eee;
+  font-family: Arial, Helvetica, sans-serif;
+  background-size: cover;
+  background-position: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #999;
 }
 
-.card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 18rem;
-    max-width: 18rem;
-    margin: 10px;
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(3, 200px);*/
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
 }
 
-.card-body{
-    border: 3px solid black;
-    box-shadow: 0 3px 6px rgb#EBDEF0 ;
-    padding: 15px;
-   margin: 10px;
-    text-align: center;
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 18rem;
+  max-width: 18rem;
+  margin: 10px;
+}
+
+.card-body {
+  border: 3px solid black;
+  box-shadow: 0 3px 6px rgb#EBDEF0;
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
 }
 
 img {
@@ -46,14 +47,16 @@ img {
 }
 
 
-.container-fluid{
-  display: flex;
-  justify-content: space-between;
-  margin: 30px;
+/*.container-fluid h1 {
+  margin: 80px;
+  font-size:10rem;
+}*/
+
+h1 {
+  
+  color: rgb(77, 75, 75);
 }
-.navbar-brand{
-  font-size: 80px;
-}
+
 footer {
   margin-bottom: -49px;
   font-weight: 200;
@@ -62,7 +65,7 @@ footer {
   color: #999;
   justify-content: center;
   font-family: Arial, sans-serif;
- }
+}
 
 footer ul {
   list-style: none;
@@ -99,7 +102,13 @@ footer p span {
   justify-content: center;
 }
 
-/*Mi vecino Totoro*/
+.pagination {
+  justify-content: center;
+  align-items: center;
+  background-color: #999;
+}
+
+/*Mi vecino Totoro
 .container-sinopsis {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -122,7 +131,8 @@ h1 {
 
 p {
   text-align: center;
-}
+}*/
+
 /*@media screen and (min-width: 900px) {
   .card {
     flex: 1 1 calc(33% - 2rem);

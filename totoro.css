@@ -4,17 +4,22 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   gap: 10px;
-  grid-template-areas: "p image";
+  grid-template-areas:"p image";
+}
+.navbar img{
+  margin-right: 100px;
+  margin-top: -203px;
 }
 
 h1 {
   display: flex;
-  position: relative;
-  text-align: center;
   font-size: 80px;
   color: rgb(77, 75, 75);
   margin: 50px;
+  align-items: center;
 }
+
+
 h2{
   color: rgb(77, 75, 75);
   margin: 50px;
@@ -31,3 +36,6 @@ p {
  margin: 50px;
  
 }
+/*div.container-fluid {
+  margin: 80px;
+}*/
