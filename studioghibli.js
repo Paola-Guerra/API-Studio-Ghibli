@@ -24,52 +24,88 @@ const customURLs = {
 };
 
 const sinopsis = {
-  "2baf70d1-42bb-4437-b551-e5fed5a87abe": "mivecinototoro.html",
+  "2baf70d1-42bb-4437-b551-e5fed5a87abe": "elcastilloenelcielo.html",
+  "12cfb892-aac0-4c5b-94af-521852e46d6a": "latumbadelasluciernagas.html",
   "58611129-2dbc-4a81-a72f-77ddfc1b1b49": "mivecinototoro.html"
 };
 
 document.addEventListener('DOMContentLoaded', function () {
 
-
   const url = 'https://ghibliapi.vercel.app/films';
-  const main = document.getElementById("main");
-  const container = document.querySelector(".container");
-
+  const main = document.querySelector("#main .container");
+  const paginatedList = document.getElementById('paginatedList');
+  const tarjetasPorPagina = 9;
 
   fetch(url)
     .then(response => response.json())
     .then(films => {
-
-      films.forEach(film => printData(film));
+      mostrarPagina(1, films);
+      renderizarPaginacion(films);
     })
     .catch(error => {
       console.log('Error', error);
     });
 
+  function renderizarPaginacion(films) {
+    const totalPaginas = Math.ceil(films.length / tarjetasPorPagina);
 
-  const printData = (film) => {
+    for (let i = 1; i <= totalPaginas; i++) {
+     const li = document.createElement('li');
+      li.classList.add('page-item');
+      const a = document.createElement('a');
+      a.classList.add('page-link');
+      a.href = '#';
+      a.textContent = i;
+      a.addEventListener('click', () => mostrarPagina(i, films));
+      li.appendChild(a);
+      paginatedList.appendChild(li);
+    }
+  }
 
-    const app = document.getElementsByClassName('container')
+  function mostrarPagina(pagina, films) {
+    const startIndex = (pagina - 1) * tarjetasPorPagina;
+    const endIndex = Math.min(startIndex + tarjetasPorPagina, films.length);
 
+    main.innerHTML = '';
+
+    for (let i = startIndex; i < endIndex; i++) {
+      printData(films[i]);
+    }
+
+    const pageItems = paginatedList.querySelectorAll('.page-item');
+    pageItems.forEach(item => item.classList.remove('active'));
+    pageItems[pagina - 1].classList.add('active');
+  }
+
+  function printData(film) {
     const filmHTML = `
-    <div class="card">
-      <img src="${film.image}" class="card-img-top" alt="${film.title}"> 
-      <div class="card-body">
-        <h5 class="card-title">${film.title}</h5>
-        <h5 class="card-title">${film.original_title}</h5>
-        <p class="card-text">${film.description}</p>
-        <p class="card-text"><strong>Director:</strong> ${film.director}</p>
-        <p class="card-text"><strong>Release Date:</strong> ${film.release_date}</p>
-        
-       <a href="${customURLs[film.id]}" class="btn btn-primary">Ver Película</a><br>
-
-       <a href="${sinopsis[film.id]}" class="masinfo">+Info</a>
+      <div class="card">
+        <img src="${film.image}" class="card-img-top" alt="${film.title}">
+        <div class="card-body">
+          <h5 class="card-title">${film.title}</h5>
+          <h5 class="card-title">${film.original_title}</h5>
+          <p class="card-text">${film.description}</p>
+          <p class="card-text"><strong>Director:</strong> ${film.director}</p>
+          <p class="card-text"><strong>Release Date:</strong> ${film.release_date}</p>
+          <a href="${customURLs[film.id]}" class="btn btn-primary">Ver Película</a><br>
+          <a href="${sinopsis[film.id]}" class="masinfo">+Info</a>
+        </div>
       </div>
-    </div>
-  `;
+    `;
 
-
-    container.innerHTML += filmHTML;
-  };
+    main.innerHTML += filmHTML;
+  }
 });
 
+
+
+// //BUSCADOR
+// document.addEventListener('DOMContentLoaded', function() {
+//   const form = document.querySelector('form'); // Selecciona el formulario de búsqueda
+//   const searchInput = document.querySelector('.form-control'); // Selecciona el campo de entrada de búsqueda
+//   const main = document.getElementById('main'); // Elemento donde se mostrarán los resultados
+
+//   form.addEventListener('submit', function(event) {
+//     event.preventDefault(); // Evita que el formulario se envíe automáticamente
+
+//     const searchTerm = searchInput.value; // Obtiene el término de búsqueda ingresado por el usuario

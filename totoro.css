@@ -25,14 +25,18 @@ h2{
   margin: 50px;
   font-size: 50px;
 }
+
+/*IMAGENES*/
 .personajes {
   width: 100%;
 }
+.setsuko{
+  margin-top: 70px;
+  width:100%;
+  height: 90%;
+} 
 
 p {
  margin: 50px;
  
 }
-/*div.container-fluid {
-  margin: 80px;
-}*/

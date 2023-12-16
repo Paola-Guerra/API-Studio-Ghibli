@@ -14,14 +14,44 @@
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* grid-template-rows: repeat(3, 200px);*/
-  gap: 20px;
+    gap: 20px;
   justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 1200px;
+  /*margin: 8%;*/
   align-items: start;
 }
 
+/*BARRA DE NAVEGACION*/
+h1 {
+  color: rgb(92, 90, 90);
+  margin: 100px;
+ }
+form{
+  margin: 30px;
+}
+
+/*LOGO*/
+img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  padding: 30px;
+}
+
+/*MODAL*/
+button.btn.btn-outline-success{
+  color:#080808;
+  border-color: #080808;
+}
+button.btn.btn-primary{
+  padding:10px;
+  margin-left: 43%;
+  margin-bottom: 3%;
+  background-color: #080808;
+  color: #bcbabd;
+}
+
+/*CARDS*/
 .card {
   display: flex;
   flex-direction: column;
@@ -38,25 +68,28 @@
   margin: 10px;
   text-align: center;
 }
-
-img {
-  display: block;
-  margin: 1rem auto;
-  max-width: 100%;
-  padding: 30px;
+a.btn.btn-primary{
+  background-color: #080808;
+  color: #bcbabd;
+  border-color:#080808;
 }
-
-
-/*.container-fluid h1 {
-  margin: 80px;
-  font-size:10rem;
-}*/
-
-h1 {
+a.masinfo{
+  color: #080808;
+}
+/*PAGINACION*/
+.pagination {
+  justify-content: center;
+  align-items: center;
+  background-color: #999;
   
-  color: rgb(77, 75, 75);
+}
+ul li.page-item a.page-link {
+  border-radius: 20% ;
+color:#080808;
+background-color: #999;
 }
 
+/*FOOTER*/
 footer {
   margin-bottom: -49px;
   font-weight: 200;
@@ -102,51 +135,10 @@ footer p span {
   justify-content: center;
 }
 
-.pagination {
-  justify-content: center;
-  align-items: center;
-  background-color: #999;
-}
-
-/*Mi vecino Totoro
-.container-sinopsis {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 10px;
-  grid-template-areas: "p image";
-
-}
-
-h1 {
-  text-align: center;
-}
-
-.personajes {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  grid-area: image;
-}
-
-p {
-  text-align: center;
-}*/
 
 /*@media screen and (min-width: 900px) {
-  .card {
-    flex: 1 1 calc(33% - 2rem);
-  }
+.card{
+ min-width: 50%;
 }
 
-.card:nth-child(2n) h1 {
-  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
-
-.card:nth-child(4n) h1 {
-  background-image: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
-}
-
-.card:nth-child(5n) h1 {
-  background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
-}*/
