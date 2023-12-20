@@ -97,15 +97,3 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-
-
-// //BUSCADOR
-// document.addEventListener('DOMContentLoaded', function() {
-//   const form = document.querySelector('form'); // Selecciona el formulario de búsqueda
-//   const searchInput = document.querySelector('.form-control'); // Selecciona el campo de entrada de búsqueda
-//   const main = document.getElementById('main'); // Elemento donde se mostrarán los resultados
-
-//   form.addEventListener('submit', function(event) {
-//     event.preventDefault(); // Evita que el formulario se envíe automáticamente
-
-//     const searchTerm = searchInput.value; // Obtiene el término de búsqueda ingresado por el usuario

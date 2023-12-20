@@ -39,6 +39,10 @@ img {
 }
 
 /*MODAL*/
+#exampleModal.modal.fade.show{
+ background-color: transparent ;
+}
+
 button.btn.btn-outline-success {
   color: #080808;
   border-color: #080808;
