@@ -40,7 +40,7 @@ img {
 
 /*MODAL*/
 #exampleModal.modal.fade.show{
- background-color: transparent ;
+ background-color: transparent;
 }
 
 button.btn.btn-outline-success {
@@ -58,30 +58,42 @@ button.btn.btn-primary {
 
 /*CARDS*/
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 18rem;
-  max-width: 18rem;
   margin: 10px;
+  height: 150px;
+  overflow-y: scroll;
+  background-color: white;
 }
-
+.card-img-top{
+  background-color: white;
+}
 .card-body {
-  border: 3px solid black;
   box-shadow: 0 3px 6px rgb#EBDEF0;
-  padding: 15px;
-  margin: 10px;
-  text-align: center;
+  max-height: 310px;
+  background-color: white;
 }
-
+.card-title{
+  background-color: white;
+  display: block;
+  font-size: 2em;
+}
+.card-text{
+  background-color: white;
+}
+strong{
+  background-color: white;
+}
 a.btn.btn-primary {
   background-color: #080808;
   color: #bcbabd;
   border-color: #080808;
+  display:block;
 }
 
 a.masinfo {
   color: #080808;
+  background-color: white;
+  text-align: center;
+  display: block;
 }
 
 /*PAGINACION*/
